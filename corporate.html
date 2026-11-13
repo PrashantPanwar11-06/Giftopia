@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Gifts – Gift Shop</title>
+  
+  <!-- 1. Bootstrap 5.3 Framework -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- 2. Custom CSS -->
+  <link rel="stylesheet" href="style.css?v=1.3">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SECTION 1: NAVBAR (HEADER)
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="header-container">
+      <nav class="navbar navbar-expand-lg p-0">
+        
+        <!-- 🔹 BRAND LOGO (Left Side) -->
+        <a class="navbar-brand d-flex align-items-center py-0 me-0" href="index.html">
+          <img src="Image/logo-01.svg" alt="Giftopia Logo" width="110" height="19" class="d-block">
+        </a>
+
+        <!-- 🔹 RIGHT ICONS: Shopping Cart + Mobile Toggle Button -->
+        <div class="d-flex align-items-center order-lg-3 ms-auto ms-lg-0">
+          
+          <!-- Shopping Cart Bag Button -->
+          <button type="button" class="cart-btn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas" aria-label="Shopping Cart">
+            <svg width="20" height="22" viewBox="826 826 140 140" fill="currentColor">
+              <path d="M960.758,934.509l2.632,23.541c0.15,1.403-0.25,2.657-1.203,3.761c-0.953,1.053-2.156,1.579-3.61,1.579H833.424 c-1.454,0-2.657-0.526-3.61-1.579c-0.952-1.104-1.354-2.357-1.203-3.761l2.632-23.541H960.758z M953.763,871.405l6.468,58.29H831.77 l6.468-58.29c0.15-1.203,0.677-2.218,1.58-3.045c0.903-0.827,1.981-1.241,3.234-1.241h19.254v9.627c0,2.658,0.94,4.927,2.82,6.807 s4.149,2.82,6.807,2.82c2.658,0,4.926-0.94,6.807-2.82s2.821-4.149,2.821-6.807v-9.627h28.882v9.627 c0,2.658,0.939,4.927,2.819,6.807c1.881,1.88,4.149,2.82,6.807,2.82s4.927-0.94,6.808-2.82c1.879-1.88,2.82-4.149,2.82-6.807v-9.627 h19.253c1.255,0,2.332,0.414,3.235,1.241C953.086,869.187,953.612,870.202,953.763,871.405z M924.881,857.492v19.254 c0,1.304-0.476,2.432-1.429,3.385s-2.08,1.429-3.385,1.429c-1.303,0-2.432-0.477-3.384-1.429c-0.953-0.953-1.43-2.081-1.43-3.385 v-19.254c0-5.315-1.881-9.853-5.641-13.613c-3.76-3.761-8.298-5.641-13.613-5.641s-9.853,1.88-13.613,5.641 c-3.761,3.76-5.641,8.298-5.641,13.613v19.254c0,1.304-0.476,2.432-1.429,3.385c-0.953,0.953-2.081,1.429-3.385,1.429 c-1.303,0-2.432-0.477-3.384-1.429c-0.953-0.953-1.429-2.081-1.429-3.385v-19.254c0-7.973,2.821-14.779,8.461-20.42 c5.641-5.641,12.448-8.461,20.42-8.461c7.973,0,14.779,2.82,20.42,8.461C922.062,842.712,924.881,849.519,924.881,857.492z"/>
+            </svg>
+            <span class="cart-badge" id="cartCountBadge">0</span>
+          </button>
+
+          <!-- Mobile Hamburger Toggle Button -->
+          <button class="navbar-toggler border-0 p-1 ms-2 d-lg-none shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#giftopiaNav" aria-controls="giftopiaNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        </div>
+
+        <!-- 🔹 NAVIGATION MENU LINKS -->
+        <div class="collapse navbar-collapse order-lg-2 ms-lg-auto" id="giftopiaNav">
+          <ul class="navbar-nav fw-bold align-items-lg-center mrgn">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="shop.html">Shop All</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="Anniversary.html">Anniversary Gifts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark active" href="corporate.html">Corporate Gifts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="chocolates.html">Chocolates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="decor.html">Home Decor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="personalised.html">Personalised Gifts</a>
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 2: CORPORATE HERO BANNER
+       ========================================================================== -->
+  <section class="shop-hero-banner" aria-label="Corporate Gifts Banner">
+    <div class="shop-banner-container">
+      <h1 class="shop-hero-title">Corporate Gifts</h1>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: PRODUCTS GRID & TOOLBAR
+       ========================================================================== -->
+  <main class="shop-main-content">
+    <div class="shop-container">
+      
+      <!-- 🔹 Toolbar (Result count + Sort Orderby) -->
+      <div class="shop-toolbar">
+        <p class="shop-result-count" id="corporateResultCount">Showing all 4 results</p>
+        
+        <div class="shop-ordering">
+          <select name="orderby" id="corporateSortSelect" aria-label="Shop order">
+            <option value="menu_order" selected>Default sorting</option>
+            <option value="popularity">Sort by popularity</option>
+            <option value="rating">Sort by average rating</option>
+            <option value="date">Sort by latest</option>
+            <option value="price_low">Sort by price: low to high</option>
+            <option value="price_high">Sort by price: high to low</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 🔹 4-Column Product Grid -->
+      <ul class="shop-products-grid" id="corporateProductsList">
+        
+        <!-- PRODUCT 1: Card Holder -->
+        <li class="shop-product-item" data-id="2" data-name="Card Holder" data-price="149" data-order="1">
+          <div class="shop-product-thumb-wrap">
+            <img src="Image/product-19-a.jpg" alt="Card Holder" loading="lazy">
+            <button type="button" class="shop-card-btn add-to-cart-trigger" data-id="2" data-name="Card Holder" data-price="149.00" data-img="Image/product-19-a.jpg" aria-label="Add to cart">
+              <span class="shop-card-tooltip">Add to cart</span>
+              <svg width="17" height="17" viewBox="826 826 140 140" fill="currentColor">
+                <path d="M960.758,934.509l2.632,23.541c0.15,1.403-0.25,2.657-1.203,3.761c-0.953,1.053-2.156,1.579-3.61,1.579H833.424 c-1.454,0-2.657-0.526-3.61-1.579c-0.952-1.104-1.354-2.357-1.203-3.761l2.632-23.541H960.758z M953.763,871.405l6.468,58.29H831.77 l6.468-58.29c0.15-1.203,0.677-2.218,1.58-3.045c0.903-0.827,1.981-1.241,3.234-1.241h19.254v9.627c0,2.658,0.94,4.927,2.82,6.807 s4.149,2.82,6.807,2.82c2.658,0,4.926-0.94,6.807-2.82s2.821-4.149,2.821-6.807v-9.627h28.882v9.627 c0,2.658,0.939,4.927,2.819,6.807c1.881,1.88,4.149,2.82,6.807,2.82s4.927-0.94,6.808-2.82c1.879-1.88,2.82-4.149,2.82-6.807v-9.627 h19.253c1.255,0,2.332,0.414,3.235,1.241C953.086,869.187,953.612,870.202,953.763,871.405z M924.881,857.492v19.254 c0,1.304-0.476,2.432-1.429,3.385s-2.08,1.429-3.385,1.429c-1.303,0-2.432-0.477-3.384-1.429c-0.953-0.953-1.43-2.081-1.43-3.385 v-19.254c0-5.315-1.881-9.853-5.641-13.613c-3.76-3.761-8.298-5.641-13.613-5.641s-9.853,1.88-13.613,5.641 c-3.761,3.76-5.641,8.298-5.641,13.613v19.254c0,1.304-0.476,2.432-1.429,3.385c-0.953,0.953-2.081,1.429-3.385,1.429 c-1.303,0-2.432-0.477-3.384-1.429c-0.953-0.953-1.429-2.081-1.429-3.385v-19.254c0-7.973,2.821-14.779,8.461-20.42 c5.641-5.641,12.448-8.461,20.42-8.461c7.973,0,14.779,2.82,20.42,8.461C922.062,842.712,924.881,849.519,924.881,857.492z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="shop-product-summary">
+            <span class="shop-product-cat">Corporate Gifts</span>
+            <h2 class="shop-product-title"><a href="#">Card Holder</a></h2>
+            <span class="shop-product-price">$149.00</span>
+          </div>
+        </li>
+
+        <!-- PRODUCT 2: Head Phone -->
+        <li class="shop-product-item" data-id="10" data-name="Head Phone" data-price="39" data-order="2">
+          <div class="shop-product-thumb-wrap">
+            <img src="Image/product-09-a.jpg" alt="Head Phone" loading="lazy">
+            <button type="button" class="shop-card-btn add-to-cart-trigger" data-id="10" data-name="Head Phone" data-price="39.00" data-img="Image/product-09-a.jpg" aria-label="Add to cart">
+              <span class="shop-card-tooltip">Add to cart</span>
+              <svg width="17" height="17" viewBox="826 826 140 140" fill="currentColor">
+                <path d="M960.758,934.509l2.632,23.541c0.15,1.403-0.25,2.657-1.203,3.761c-0.953,1.053-2.156,1.579-3.61,1.579H833.424 c-1.454,0-2.657-0.526-3.61-1.579c-0.952-1.104-1.354-2.357-1.203-3.761l2.632-23.541H960.758z M953.763,871.405l6.468,58.29H831.77 l6.468-58.29c0.15-1.203,0.677-2.218,1.58-3.045c0.903-0.827,1.981-1.241,3.234-1.241h19.254v9.627c0,2.658,0.94,4.927,2.82,6.807 s4.149,2.82,6.807,2.82c2.658,0,4.926-0.94,6.807-2.82s2.821-4.149,2.821-6.807v-9.627h28.882v9.627 c0,2.658,0.939,4.927,2.819,6.807c1.881,1.88,4.149,2.82,6.807,2.82s4.927-0.94,6.808-2.82c1.879-1.88,2.82-4.149,2.82-6.807v-9.627 h19.253c1.255,0,2.332,0.414,3.235,1.241C953.086,869.187,953.612,870.202,953.763,871.405z M924.881,857.492v19.254 c0,1.304-0.476,2.432-1.429,3.385s-2.08,1.429-3.385,1.429c-1.303,0-2.432-0.477-3.384-1.429c-0.953-0.953-1.43-2.081-1.43-3.385 v-19.254c0-5.315-1.881-9.853-5.641-13.613c-3.76-3.761-8.298-5.641-13.613-5.641s-9.853,1.88-13.613,5.641 c-3.761,3.76-5.641,8.298-5.641,13.613v19.254c0,1.304-0.476,2.432-1.429,3.385c-0.953,0.953-2.081,1.429-3.385,1.429 c-1.303,0-2.432-0.477-3.384-1.429c-0.953-0.953-1.429-2.081-1.429-3.385v-19.254c0-7.973,2.821-14.779,8.461-20.42 c5.641-5.641,12.448-8.461,20.42-8.461c7.973,0,14.779,2.82,20.42,8.461C922.062,842.712,924.881,849.519,924.881,857.492z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="shop-product-summary">
+            <span class="shop-product-cat">Corporate Gifts</span>
+            <h2 class="shop-product-title"><a href="#">Head Phone</a></h2>
+            <span class="shop-product-price">$39.00</span>
+          </div>
+        </li>
+
+        <!-- PRODUCT 3: Office Hand Bag -->
+        <li class="shop-product-item" data-id="15" data-name="Office Hand Bag" data-price="213" data-order="3">
+          <div class="shop-product-thumb-wrap">
+            <img src="Image/product-18-a.jpg" alt="Office Hand Bag" loading="lazy">
+            <button type="button" class="shop-card-btn add-to-cart-trigger" data-id="15" data-name="Office Hand Bag" data-price="213.00" data-img="Image/product-18-a.jpg" aria-label="Add to cart">
+              <span class="shop-card-tooltip">Add to cart</span>
+              <svg width="17" height="17" viewBox="826 826 140 140" fill="currentColor">
+                <path d="M960.758,934.509l2.632,23.541c0.15,1.403-0.25,2.657-1.203,3.761c-0.953,1.053-2.156,1.579-3.61,1.579H833.424 c-1.454,0-2.657-0.526-3.61-1.579c-0.952-1.104-1.354-2.357-1.203-3.761l2.632-23.541H960.758z M953.763,871.405l6.468,58.29H831.77 l6.468-58.29c0.15-1.203,0.677-2.218,1.58-3.045c0.903-0.827,1.981-1.241,3.234-1.241h19.254v9.627c0,2.658,0.94,4.927,2.82,6.807 s4.149,2.82,6.807,2.82c2.658,0,4.926-0.94,6.807-2.82s2.821-4.149,2.821-6.807v-9.627h28.882v9.627 c0,2.658,0.939,4.927,2.819,6.807c1.881,1.88,4.149,2.82,6.807,2.82s4.927-0.94,6.808-2.82c1.879-1.88,2.82-4.149,2.82-6.807v-9.627 h19.253c1.255,0,2.332,0.414,3.235,1.241C953.086,869.187,953.612,870.202,953.763,871.405z M924.881,857.492v19.254 c0,1.304-0.476,2.432-1.429,3.385s-2.08,1.429-3.385,1.429c-1.303,0-2.432-0.477-3.384-1.429c-0.953-0.953-1.43-2.081-1.43-3.385 v-19.254c0-5.315-1.881-9.853-5.641-13.613c-3.76-3.761-8.298-5.641-13.613-5.641s-9.853,1.88-13.613,5.641 c-3.761,3.76-5.641,8.298-5.641,13.613v19.254c0,1.304-0.476,2.432-1.429,3.385c-0.953,0.953-2.081,1.429-3.385,1.429 c-1.303,0-2.432-0.477-3.384-1.429c-0.953-0.953-1.429-2.081-1.429-3.385v-19.254c0-7.973,2.821-14.779,8.461-20.42 c5.641-5.641,12.448-8.461,20.42-8.461c7.973,0,14.779,2.82,20.42,8.461C922.062,842.712,924.881,849.519,924.881,857.492z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="shop-product-summary">
+            <span class="shop-product-cat">Corporate Gifts</span>
+            <h2 class="shop-product-title"><a href="#">Office Hand Bag</a></h2>
+            <span class="shop-product-price">$213.00</span>
+          </div>
+        </li>
+
+        <!-- PRODUCT 4: Premium Watch -->
+        <li class="shop-product-item" data-id="18" data-name="Premium Watch" data-price="89" data-order="4">
+          <div class="shop-product-thumb-wrap">
+            <img src="Image/product-11-a.jpg" alt="Premium Watch" loading="lazy">
+            <button type="button" class="shop-card-btn add-to-cart-trigger" data-id="18" data-name="Premium Watch" data-price="89.00" data-img="Image/product-11-a.jpg" aria-label="Add to cart">
+              <span class="shop-card-tooltip">Add to cart</span>
+              <svg width="17" height="17" viewBox="826 826 140 140" fill="currentColor">
+                <path d="M960.758,934.509l2.632,23.541c0.15,1.403-0.25,2.657-1.203,3.761c-0.953,1.053-2.156,1.579-3.61,1.579H833.424 c-1.454,0-2.657-0.526-3.61-1.579c-0.952-1.104-1.354-2.357-1.203-3.761l2.632-23.541H960.758z M953.763,871.405l6.468,58.29H831.77 l6.468-58.29c0.15-1.203,0.677-2.218,1.58-3.045c0.903-0.827,1.981-1.241,3.234-1.241h19.254v9.627c0,2.658,0.94,4.927,2.82,6.807 s4.149,2.82,6.807,2.82c2.658,0,4.926-0.94,6.807-2.82s2.821-4.149,2.821-6.807v-9.627h28.882v9.627 c0,2.658,0.939,4.927,2.819,6.807c1.881,1.88,4.149,2.82,6.807,2.82s4.927-0.94,6.808-2.82c1.879-1.88,2.82-4.149,2.82-6.807v-9.627 h19.253c1.255,0,2.332,0.414,3.235,1.241C953.086,869.187,953.612,870.202,953.763,871.405z M924.881,857.492v19.254 c0,1.304-0.476,2.432-1.429,3.385s-2.08,1.429-3.385,1.429c-1.303,0-2.432-0.477-3.384-1.429c-0.953-0.953-1.43-2.081-1.43-3.385 v-19.254c0-5.315-1.881-9.853-5.641-13.613c-3.76-3.761-8.298-5.641-13.613-5.641s-9.853,1.88-13.613,5.641 c-3.761,3.76-5.641,8.298-5.641,13.613v19.254c0,1.304-0.476,2.432-1.429,3.385c-0.953,0.953-2.081,1.429-3.385,1.429 c-1.303,0-2.432-0.477-3.384-1.429c-0.953-0.953-1.429-2.081-1.429-3.385v-19.254c0-7.973,2.821-14.779,8.461-20.42 c5.641-5.641,12.448-8.461,20.42-8.461c7.973,0,14.779,2.82,20.42,8.461C922.062,842.712,924.881,849.519,924.881,857.492z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="shop-product-summary">
+            <span class="shop-product-cat">Corporate Gifts</span>
+            <h2 class="shop-product-title"><a href="#">Premium Watch</a></h2>
+            <span class="shop-product-price">$89.00</span>
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       SECTION 4: FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" id="colophon">
+    <div class="footer-primary">
+      <div class="footer-container">
+        <div class="footer-primary-grid">
+          
+          <!-- Column 1: Brand Title -->
+          <div class="footer-brand-col">
+            <h2 class="footer-brand"><a href="index.html" class="d-inline-block"><img src="Image/logo-01.svg" alt="Giftopia Logo" width="110" height="19" class="d-block"></a></h2>
+          </div>
+
+          <!-- Column 2: Navigation Links -->
+          <div class="footer-nav-col">
+            <ul class="footer-nav" id="footer-menu">
+              <li class="menu-item"><a href="About.html" class="footer-nav-link">About</a></li>
+              <li class="menu-item"><a href="contact.html" class="footer-nav-link">Contact</a></li>
+              <li class="menu-item"><a href="#" class="footer-nav-link">Returns &amp; Exchange</a></li>
+              <li class="menu-item"><a href="#" class="footer-nav-link">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Social Icons -->
+          <div class="footer-social-col">
+            <div class="footer-socials">
+              <a href="#" class="footer-social-link" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 512 512" fill="currentColor"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="Twitter">
+                <svg width="18" height="18" viewBox="0 0 512 512" fill="currentColor"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="YouTube">
+                <svg width="18" height="18" viewBox="0 0 576 512" fill="currentColor"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 🔹 Bottom Copyright Bar -->
+    <div class="footer-bottom">
+      <div class="footer-container">
+        <div class="footer-bottom-inner">
+          <p class="footer-copyright">Copyright &copy; 2026 Gift Shop | Powered by Gift Shop</p>
+          <p class="footer-rights">All rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       SECTION 5: OFFCANVAS CART DRAWER
+       ========================================================================== -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header border-bottom px-4 py-3">
+      <h5 class="offcanvas-title font-heading text-uppercase fw-semibold" id="cartOffcanvasLabel">Shopping Cart</h5>
+      <button type="button" class="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column p-4" id="cartBody">
+      <!-- Empty Cart Message (Default) -->
+      <div id="cartEmptyState" class="d-flex flex-column align-items-center justify-content-center text-center my-auto">
+        <svg class="mb-3 text-secondary opacity-50" width="56" height="56" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+        </svg>
+        <p class="text-secondary fs-6 mb-4">No products in the cart.</p>
+        <button type="button" class="btn btn-outline-dark rounded-0 px-4 py-3 text-uppercase fw-medium" data-bs-dismiss="offcanvas" style="letter-spacing: 1.5px; font-size: 13px;">Continue Shopping</button>
+      </div>
+
+      <!-- Filled Cart Content -->
+      <div id="cartItemsContainer" class="d-none flex-column h-100">
+        <div class="flex-grow-1 overflow-auto pe-1" id="cartItemsList"></div>
+        <div class="cart-subtotal-wrap mt-auto">
+          <span>Subtotal:</span>
+          <span id="cartSubtotalValue">$0.00</span>
+        </div>
+        <div class="d-grid gap-2 pt-2">
+          <a href="cart.html" class="btn btn-outline-dark rounded-0 py-2 text-uppercase fw-medium" style="letter-spacing: 1.5px; font-size: 13px;">View Cart</a>
+          <a href="checkout.html" id="cartCheckoutBtn" class="btn btn-dark rounded-0 py-3 text-uppercase fw-medium text-center" style="letter-spacing: 1.5px; font-size: 13px;">Checkout</a>
+          <button type="button" id="clearCartBtn" class="btn btn-link text-muted text-decoration-none p-0 mt-1" style="font-size: 12px; letter-spacing: 1px;">Clear Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 6: JAVASCRIPT LOGIC
+       ========================================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Interactive Shopping Cart System -->
+  <script src="cart.js"></script>
+
+  <script>
+    // -------------------------------------------------------------
+    // 2. Sorting Functionality
+    // -------------------------------------------------------------
+    const sortSelect = document.getElementById('corporateSortSelect');
+    const productsList = document.getElementById('corporateProductsList');
+
+    if (sortSelect && productsList) {
+      sortSelect.addEventListener('change', function() {
+        const val = this.value;
+        const items = Array.from(productsList.querySelectorAll('.shop-product-item'));
+
+        items.sort((a, b) => {
+          const priceA = parseFloat(a.getAttribute('data-price'));
+          const priceB = parseFloat(b.getAttribute('data-price'));
+          const nameA = a.getAttribute('data-name').toLowerCase();
+          const nameB = b.getAttribute('data-name').toLowerCase();
+          const orderA = parseInt(a.getAttribute('data-order')) || 0;
+          const orderB = parseInt(b.getAttribute('data-order')) || 0;
+
+          if (val === 'price_low') return priceA - priceB;
+          if (val === 'price_high') return priceB - priceA;
+          if (val === 'date') return nameA.localeCompare(nameB);
+          return orderA - orderB;
+        });
+
+        items.forEach(it => productsList.appendChild(it));
+      });
+    }
+  </script>
+
+</body>
+</html>

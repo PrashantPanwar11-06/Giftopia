@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Gift Shop</title>
+  
+  <!-- 1. Bootstrap 5.3 Framework -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- 2. Custom CSS -->
+  <link rel="stylesheet" href="style.css?v=2.4">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SECTION 1: NAVBAR (HEADER)
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="header-container">
+      <nav class="navbar navbar-expand-lg p-0">
+        
+        <!-- 🔹 BRAND LOGO (Left Side) -->
+        <a class="navbar-brand d-flex align-items-center py-0 me-0" href="index.html">
+          <img src="Image/logo-01.svg" alt="Giftopia Logo" width="110" height="19" class="d-block">
+        </a>
+
+        <!-- 🔹 RIGHT ICONS: Shopping Cart + Mobile Toggle Button -->
+        <div class="d-flex align-items-center order-lg-3 ms-auto ms-lg-0">
+          
+          <!-- Shopping Cart Bag Button -->
+          <button type="button" class="cart-btn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas" aria-label="Shopping Cart">
+            <svg width="20" height="22" viewBox="826 826 140 140" fill="currentColor">
+              <path d="M960.758,934.509l2.632,23.541c0.15,1.403-0.25,2.657-1.203,3.761c-0.953,1.053-2.156,1.579-3.61,1.579H833.424 c-1.454,0-2.657-0.526-3.61-1.579c-0.952-1.104-1.354-2.357-1.203-3.761l2.632-23.541H960.758z M953.763,871.405l6.468,58.29H831.77 l6.468-58.29c0.15-1.203,0.677-2.218,1.58-3.045c0.903-0.827,1.981-1.241,3.234-1.241h19.254v9.627c0,2.658,0.94,4.927,2.82,6.807 s4.149,2.82,6.807,2.82c2.658,0,4.926-0.94,6.807-2.82s2.821-4.149,2.821-6.807v-9.627h28.882v9.627 c0,2.658,0.939,4.927,2.819,6.807c1.881,1.88,4.149,2.82,6.807,2.82s4.927-0.94,6.808-2.82c1.879-1.88,2.82-4.149,2.82-6.807v-9.627 h19.253c1.255,0,2.332,0.414,3.235,1.241C953.086,869.187,953.612,870.202,953.763,871.405z M924.881,857.492v19.254 c0,1.304-0.476,2.432-1.429,3.385s-2.08,1.429-3.385,1.429c-1.303,0-2.432-0.477-3.384-1.429c-0.953-0.953-1.43-2.081-1.43-3.385 v-19.254c0-5.315-1.881-9.853-5.641-13.613c-3.76-3.761-8.298-5.641-13.613-5.641s-9.853,1.88-13.613,5.641 c-3.761,3.76-5.641,8.298-5.641,13.613v19.254c0,1.304-0.476,2.432-1.429,3.385c-0.953,0.953-2.081,1.429-3.385,1.429 c-1.303,0-2.432-0.477-3.384-1.429c-0.953-0.953-1.429-2.081-1.429-3.385v-19.254c0-7.973,2.821-14.779,8.461-20.42 c5.641-5.641,12.448-8.461,20.42-8.461c7.973,0,14.779,2.82,20.42,8.461C922.062,842.712,924.881,849.519,924.881,857.492z"/>
+            </svg>
+            <span class="cart-badge" id="cartCountBadge">0</span>
+          </button>
+
+          <!-- Mobile Hamburger Toggle Button -->
+          <button class="navbar-toggler border-0 p-1 ms-2 d-lg-none shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#giftopiaNav" aria-controls="giftopiaNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        </div>
+
+        <!-- 🔹 NAVIGATION MENU LINKS -->
+        <div class="collapse navbar-collapse order-lg-2 ms-lg-auto" id="giftopiaNav">
+          <ul class="navbar-nav fw-bold align-items-lg-center mrgn">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="Shop.html">Shop All</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="Anniversary.html">Anniversary Gifts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="corporate.html">Corporate Gifts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="chocolates.html">Chocolates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="decor.html">Home Decor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="personalised.html">Personalised Gifts</a>
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         SECTION 2: CONTACT HERO BANNER
+         ========================================================================== -->
+    <section class="contact-hero-banner" aria-label="Contact Page Header">
+      <div class="contact-hero-container">
+        <h1 class="contact-hero-title">Contact</h1>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: GET IN TOUCH & CONTACT FORM
+         ========================================================================== -->
+    <section class="contact-main-section">
+      <div class="contact-inner-container">
+        <div class="contact-row-grid">
+          
+          <!-- 🔹 LEFT COLUMN: Contact Details (50% Width) -->
+          <div class="contact-info-col">
+            <h2 class="contact-title">Get in touch</h2>
+            <p class="contact-description">
+              An extremely detailed and comprehensive description goes here, providing an extensive amount of information about the topic
+            </p>
+
+            <!-- 1. Address Item -->
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">
+                <!-- Location Pin SVG -->
+                <svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/>
+                </svg>
+              </div>
+              <div class="contact-info-content">
+                <span class="contact-info-label">Address</span>
+                <p class="contact-info-value">2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
+              </div>
+            </div>
+
+            <hr class="contact-info-divider">
+
+            <!-- 2. Phone Item -->
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">
+                <!-- Phone Alt SVG -->
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"/>
+                </svg>
+              </div>
+              <div class="contact-info-content">
+                <span class="contact-info-label">Phone</span>
+                <p class="contact-info-value"><a href="tel:+91987654321">(+91) 987 654 321</a></p>
+              </div>
+            </div>
+
+            <hr class="contact-info-divider">
+
+            <!-- 3. Email Item -->
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">
+                <!-- Envelope SVG -->
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/>
+                </svg>
+              </div>
+              <div class="contact-info-content">
+                <span class="contact-info-label">Email</span>
+                <p class="contact-info-value"><a href="mailto:contact@giftopia.com">contact@giftopia.com</a></p>
+              </div>
+            </div>
+
+            <hr class="contact-info-divider">
+
+            <!-- 4. Social Media Links (Clean SVGs with 16px Gap) -->
+            <div class="contact-social-wrap">
+              <a href="#" class="contact-social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+              </a>
+              <a href="#" class="contact-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+              </a>
+              <a href="#" class="contact-social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+              </a>
+              <a href="#" class="contact-social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 🔹 RIGHT COLUMN: Contact Form Card (50% Width) -->
+          <div class="contact-form-col">
+            <div class="contact-form-box">
+              
+              <!-- Form Success Feedback Message -->
+              <div id="contactSuccessAlert" class="contact-alert-msg alert-success" role="alert">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16" class="flex-shrink-0">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+                <span>Thank you! Your message has been sent successfully. We will get back to you shortly.</span>
+              </div>
+
+              <!-- Contact Form -->
+              <form id="contactForm" novalidate>
+                <!-- Name Field -->
+                <div class="contact-field-group">
+                  <label for="contactName" class="contact-field-label">
+                    Name <span class="required-mark" aria-hidden="true">*</span>
+                  </label>
+                  <input type="text" id="contactName" name="name" class="contact-input-field" placeholder="Your Name" required>
+                </div>
+
+                <!-- Email Field -->
+                <div class="contact-field-group">
+                  <label for="contactEmail" class="contact-field-label">
+                    Email <span class="required-mark" aria-hidden="true">*</span>
+                  </label>
+                  <input type="email" id="contactEmail" name="email" class="contact-input-field" placeholder="Your Email Address" required>
+                </div>
+
+                <!-- Message Field -->
+                <div class="contact-field-group">
+                  <label for="contactMessage" class="contact-field-label">
+                    Message
+                  </label>
+                  <textarea id="contactMessage" name="message" class="contact-textarea-field" placeholder="How can we help you?"></textarea>
+                </div>
+
+                <!-- Submit Button (Left Aligned) -->
+                <div class="contact-submit-btn-wrap">
+                  <button type="submit" id="contactSubmitBtn" class="contact-form-submit-btn">
+                    <span>SUBMIT</span>
+                  </button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: FREQUENTLY ASKED QUESTIONS (FAQ - CENTER ALIGNED)
+         ========================================================================== -->
+    <section class="contact-faq-section" aria-label="Frequently Asked Questions">
+      <div class="contact-inner-container">
+        
+        <!-- Center Header: Title & Description -->
+        <div class="faq-header-center">
+          <h2 class="faq-main-title">Frequently Asked Questions</h2>
+          <p class="faq-main-description">
+            Share some details here. This is Flexible section where you can share anything you want. It could be details or some information.
+          </p>
+        </div>
+
+        <!-- Center Accordion Container (820px Max-width) -->
+        <div class="faq-accordion-container" id="faqAccordion">
+
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>What payment methods do you accept?</span>
+              <span class="faq-icon-arrow" aria-hidden="true">
+                <svg viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer-collapse">
+              <p class="faq-answer-content">
+                We accept major credit cards like Visa, Mastercard, and American Express, as well as PayPal and other online payment platforms.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Do you offer gift wrapping services?</span>
+              <span class="faq-icon-arrow" aria-hidden="true">
+                <svg viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer-collapse">
+              <p class="faq-answer-content">
+                Yes, we offer professional gift wrapping for a small fee. Choose the option during checkout for beautifully presented gifts.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Can I include a personalized message with my gift?</span>
+              <span class="faq-icon-arrow" aria-hidden="true">
+                <svg viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer-collapse">
+              <p class="faq-answer-content">
+                Certainly! Add a personalized message during checkout to make your gift extra special.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>What is your return policy?</span>
+              <span class="faq-icon-arrow" aria-hidden="true">
+                <svg viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer-collapse">
+              <p class="faq-answer-content">
+                You can return items within 30 days for a full refund or exchange. Check our return policy for specific conditions.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>How can I track my order?</span>
+              <span class="faq-icon-arrow" aria-hidden="true">
+                <svg viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer-collapse">
+              <p class="faq-answer-content">
+                Once your order ships, you'll receive a tracking number via email. Use it to track your delivery online. For assistance, contact our customer service team.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: CALL TO ACTION (CTA BANNER)
+         ========================================================================== -->
+    <section class="cta-section" aria-label="Discover Gifts Banner">
+      <div class="cta-box">
+        <span class="cta-subtitle">EXPLORE</span>
+        <h2 class="cta-title">Ready to Discover Unique and Thoughtful Gifts for Every Occasion?</h2>
+        <p class="cta-description">
+          Start your journey towards unforgettable gifting experiences today. Explore our curated collection and discover the ideal present for any occasion.
+        </p>
+        <a href="Shop.html" class="btn-cta">VIEW COLLECTION</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SECTION 6: SITE FOOTER (Matching About.html & style.css Section 12)
+       ========================================================================== -->
+  <footer class="site-footer" id="colophon">
+    <!-- 🔹 Main Footer Body (3-Column Layout) -->
+    <div class="footer-primary">
+      <div class="footer-container">
+        <div class="footer-primary-grid">
+          
+          <!-- Column 1: Brand Title with Logo -->
+          <div class="footer-brand-col">
+            <h2 class="footer-brand">
+              <a href="index.html" class="d-inline-block">
+                <img src="Image/logo-01.svg" alt="Giftopia Logo" width="110" height="19" class="d-block">
+              </a>
+            </h2>
+          </div>
+
+          <!-- Column 2: Navigation Links -->
+          <div class="footer-nav-col">
+            <ul class="footer-nav" id="footer-menu">
+              <li class="menu-item"><a href="About.html" class="footer-nav-link">About</a></li>
+              <li class="menu-item"><a href="contact.html" class="footer-nav-link text-decoration-underline fw-bold" aria-current="page">Contact</a></li>
+              <li class="menu-item"><a href="returns.html" class="footer-nav-link">Returns &amp; Exchange</a></li>
+              <li class="menu-item"><a href="privacy.html" class="footer-nav-link">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Social Icons -->
+          <div class="footer-social-col">
+            <div class="footer-socials">
+              <a href="#" class="footer-social-link" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 512 512" fill="currentColor"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="Twitter">
+                <svg width="18" height="18" viewBox="0 0 512 512" fill="currentColor"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="YouTube">
+                <svg width="18" height="18" viewBox="0 0 576 512" fill="currentColor"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 🔹 Bottom Copyright Bar -->
+    <div class="footer-bottom">
+      <div class="footer-container">
+        <div class="footer-bottom-inner">
+          <p class="footer-copyright">Copyright &copy; 2026 Gift Shop | Powered by Gift Shop</p>
+          <p class="footer-rights">All rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       SECTION 7: OFFCANVAS CART DRAWER
+       ========================================================================== -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header border-bottom px-4 py-3">
+      <h5 class="offcanvas-title font-heading text-uppercase fw-semibold" id="cartOffcanvasLabel">Shopping Cart</h5>
+      <button type="button" class="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column p-4" id="cartBody">
+      <!-- Empty Cart Message (Default) -->
+      <div id="cartEmptyState" class="d-flex flex-column align-items-center justify-content-center text-center my-auto">
+        <svg class="mb-3 text-secondary opacity-50" width="56" height="56" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+        </svg>
+        <p class="text-secondary fs-6 mb-4">No products in the cart.</p>
+        <button type="button" class="btn btn-outline-dark rounded-0 px-4 py-3 text-uppercase fw-medium" data-bs-dismiss="offcanvas" style="letter-spacing: 1.5px; font-size: 13px;">Continue Shopping</button>
+      </div>
+
+      <!-- Filled Cart Content -->
+      <div id="cartItemsContainer" class="d-none flex-column h-100">
+        <div class="flex-grow-1 overflow-auto pe-1" id="cartItemsList"></div>
+        <div class="cart-subtotal-wrap mt-auto">
+          <span>Subtotal:</span>
+          <span id="cartSubtotalValue">$0.00</span>
+        </div>
+        <div class="d-grid gap-2 pt-2">
+          <a href="cart.html" class="btn btn-outline-dark rounded-0 py-2 text-uppercase fw-medium" style="letter-spacing: 1.5px; font-size: 13px;">View Cart</a>
+          <a href="checkout.html" id="cartCheckoutBtn" class="btn btn-dark rounded-0 py-3 text-uppercase fw-medium text-center" style="letter-spacing: 1.5px; font-size: 13px;">Checkout</a>
+          <button type="button" id="clearCartBtn" class="btn btn-link text-muted text-decoration-none p-0 mt-1" style="font-size: 12px; letter-spacing: 1px;">Clear Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 8: JAVASCRIPT LOGIC
+       ========================================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Interactive Shopping Cart System -->
+  <script src="cart.js"></script>
+
+  <script>
+    // -------------------------------------------------------------
+    // 2. Interactive Accordion Toggle (FAQ)
+    // -------------------------------------------------------------
+    const faqButtons = document.querySelectorAll('.faq-question-btn');
+    faqButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        const collapse = item.querySelector('.faq-answer-collapse');
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+        // Close other items if desired, or toggle current
+        faqButtons.forEach(otherBtn => {
+          if (otherBtn !== button) {
+            otherBtn.setAttribute('aria-expanded', 'false');
+            const otherItem = otherBtn.closest('.faq-item');
+            otherItem.classList.remove('active');
+            const otherCollapse = otherItem.querySelector('.faq-answer-collapse');
+            otherCollapse.style.maxHeight = null;
+          }
+        });
+
+        if (isExpanded) {
+          button.setAttribute('aria-expanded', 'false');
+          item.classList.remove('active');
+          collapse.style.maxHeight = null;
+        } else {
+          button.setAttribute('aria-expanded', 'true');
+          item.classList.add('active');
+          collapse.style.maxHeight = collapse.scrollHeight + 'px';
+        }
+      });
+    });
+
+
+    // -------------------------------------------------------------
+    // 3. Contact Form Submission & Feedback Handling
+    // -------------------------------------------------------------
+    const contactForm = document.getElementById('contactForm');
+    const contactSuccessAlert = document.getElementById('contactSuccessAlert');
+    const contactSubmitBtn = document.getElementById('contactSubmitBtn');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const nameInput = document.getElementById('contactName');
+        const emailInput = document.getElementById('contactEmail');
+
+        if (!nameInput.value.trim() || !emailInput.value.trim()) {
+          alert('Please fill out all required fields (*)');
+          return;
+        }
+
+        // Simulating submission animation
+        contactSubmitBtn.disabled = true;
+        contactSubmitBtn.innerHTML = '<span>SENDING...</span>';
+
+        setTimeout(() => {
+          contactSubmitBtn.disabled = false;
+          contactSubmitBtn.innerHTML = '<span>SUBMIT</span>';
+          contactSuccessAlert.style.display = 'flex';
+          contactForm.reset();
+
+          // Scroll smoothly to alert
+          contactSuccessAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 600);
+      });
+    }
+  </script>
+
+</body>
+</html>
